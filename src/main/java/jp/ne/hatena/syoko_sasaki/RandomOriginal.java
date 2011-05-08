@@ -8,8 +8,10 @@ import java.util.Random;
 
 public class RandomOriginal {
 
+	private static Random random = new Random();
+
+	// 5.1-2
 	public static int rundumAtoB(int a, int b) {
-		Random random = new Random();
 		int m = (int) floor((log(b - a)) / (log(2)));
 		int result = 0;
 		for (int i = 0; i <= m; i++) {
