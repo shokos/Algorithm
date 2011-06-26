@@ -17,6 +17,7 @@ public class RandomOriginal {
 		for (int i = 0; i <= m; i++) {
 			result += (random.nextInt(2)) * (pow(2, i));
 		}
+		// はみでたら最初からやりなおし
 		return result > (b - a) ? rundumAtoB(a, b) + a : result + a;
 	}
 }

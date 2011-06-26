@@ -39,4 +39,13 @@ public class RandomManagerTest {
 		assertThat(per > 450 && per < 550, is(true));
 	}
 
+	@Test
+	public void biasedRandom2Test() throws Exception {
+		int per = 0;
+		for (int i = 0; i < 1000; i++) {
+			per += RandomManager.getBiasedRandom(0.0001);
+		}
+		assertThat(per > 450 && per < 550, is(true));
+	}
+
 }
